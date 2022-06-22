@@ -1,0 +1,30 @@
+body { 
+	margin: 0;
+	line-height: 1.5;
+	color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}
+
+
+.container {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
