@@ -1,8 +1,21 @@
 body { 
 	margin: 0;
-	color: #212121;
+	color: var(--main-color);
 	font-family: 'Roboto', sans-serif;
 }
+
+:root{
+	--main-color: #212121;
+	--blue: #2196F3;
+	--white: #fff;
+	--grey-border:#ECECEC;
+	--grey:#2F303A;
+	--grey-bckg: #757575;
+	--white-bckg:#F5F4FA;
+	--white-border: #eeeeee;
+}
+
+
 
 h1,
 h2,
@@ -41,7 +54,7 @@ ul{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	border-bottom: 1px solid #ECECEC;
+	border-bottom: 1px solid var(--grey-border);
 	align-items: center;
 
 }
@@ -59,14 +72,14 @@ ul{
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 31px;
-	color:#212121;
+	color:var(--main-color);
 	text-decoration: none;
 	margin-right: 93px;
 
 }
 
 .header-logo--blue{
-	color: #2196F3;
+	color: var(--blue);
 
 }
 
@@ -82,23 +95,31 @@ ul{
 
 .header-links a{
 	text-decoration: none;
-	color:#212121;
+	color: var(--main-color);
 	margin-right: 50px;
 }
 
+.header-links--grey a {
+	color:var(--grey-bckg);
+}
+
+
 .header-links a:hover{
-	color: #2196F3
+	color: var(--blue);
 }
 
 .header-links a:focus{
-	color: #2196F3
+	color: var(--blue);
 }
 
+.header-links-current a{
+	color: var(--blue)
+}
 
 /*home*/
 
 .home{
-	background-color: #2F303A ;
+	background-color: var(--grey) ;
 }
 
 .home-inner{
@@ -116,28 +137,28 @@ ul{
 	font-size: 44px;
 	line-height: 60px;
 	text-transform: uppercase;
-	color:#fff;
+	color:var(--white);
 	margin-bottom: 30px;
 }
 
 .btn{
-	background-color: #2196F3;
+	background-color: var(--blue);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 30px;
-	color: #fff;
+	color: var(--white);
 	cursor: pointer;
 	height: 50px;
 	width: 200px;
 	border: none;
 }
 .btn:focus{
-	border: 2px solid #fff;
+	border: 2px solid var(--white);
 }
 .btn:hover{
-	border: 2px solid #fff;
+	border: 2px solid var(--white);
 }
 
 /*section*/
@@ -177,7 +198,7 @@ ul{
 .dsrcpt-item-txt{
 	font-size: 14px;
 	line-height: 24px;
-	color:#757575;
+	color: var(--grey-bckg);
 }
 
 
@@ -195,7 +216,7 @@ ul{
 /*team*/
 .team-bckg{
 	width: 100%;
-	background-color: #F5F4FA;
+	background-color: var(--white-bckg);
 }
 .team{
 	display: flex;
@@ -203,7 +224,7 @@ ul{
 }
 .team-item{
 	margin-right: 30px;
-	background-color: #fff;
+	background-color: var(--white);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 
@@ -224,12 +245,12 @@ ul{
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19px;
-	color:#757575;
+	color:var(--grey-bckg);
 }
 
 /*footer*/
 .footer{
-	background-color:#2F303A ;
+	background-color: var(--grey) ;
 	width: 100%;
 }
 .footer-inner{
@@ -244,21 +265,21 @@ ul{
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 31px;
-	color:#fff;
+	color:var(--white);
 	text-decoration: none;
 	margin-right: 93px;
 	margin-bottom: 20px;
 }
 
 .footer-logo--blue{
-	color: #2196F3;
+	color: var(--blue);
 }
 
 .footer-adress {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 24px;
-	color:#fff;
+	color:var(--white);
 	text-decoration: none;
 	font-style: normal;
 	margin-bottom: 9px;
@@ -275,11 +296,11 @@ ul{
 }
 
 .footer-links:hover{
-	color: #2196F3
+	color: var(--blue);
 }
 
 .footer-links:focus{
-	color: #2196F3
+	color: var(--blue);
 }
 
 
@@ -296,25 +317,30 @@ ul{
 .porfolio-nav-btn{
 	padding: 6px 22px;
 	cursor: pointer;
-	background: #F5F4FA;
+	background: var(--white-bckg);
 	border-radius: 4px;
 	font-family: inherit;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 26px;	
-	color:#212121;
+	color:var(--main-color);
 	border:none;
 	margin-right: 10px;
 }
 
 .porfolio-nav-btn:active{
-	color:#fff;
-	background: #2196F3;
+	color:var(--white);
+	background: var(--blue);
 }
 
 .porfolio-nav-btn:hover{
-	color:#fff;
-	background: #2196F3;
+	color:var(--white);
+	background: var(--blue);
+}
+
+.porfolio-nav-btn--current{
+	color:var(--white);
+	background: var(--blue);
 }
 
 .portfolio{
@@ -325,13 +351,17 @@ ul{
 }
 
 .portfolio-item{
-	background: #FFFFFF;
-	border: 1px solid #EEEEEE;
+	background: var(--white);
+	border: 1px solid var(--white-border);
 
 	
 	margin-bottom: 30px;
 	margin-right: 18px;
 
+}
+.portfolio-item a{
+	text-decoration: none;
+	color:inherit;
 }
 
 .portfolio-info{
@@ -347,5 +377,5 @@ ul{
 .portflio-type{
 	font-size: 16px;
 	line-height: 30px;
-	color: #757575;
+	color: var(--grey-bckg);
 }
