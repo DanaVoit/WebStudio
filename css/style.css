@@ -18,9 +18,9 @@ ul {
 
 .container {
 	width: 100%;
-	max-width: 1170px;
+	max-width: 1180px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 5px;
 }
 
 *,
@@ -42,7 +42,7 @@ ul{
 	flex-direction: row;
 	justify-content: space-between;
 	border-bottom: 1px solid #ECECEC;
-	;
+	align-items: center;
 
 }
 
@@ -50,6 +50,7 @@ ul{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
 }
 
 .header-logo{
@@ -281,3 +282,70 @@ ul{
 	color: #2196F3
 }
 
+
+
+/*porfolio*/
+.portfolio-nav{
+	margin: 93px 0 50px 0;
+	padding: 0 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.porfolio-nav-btn{
+	padding: 6px 22px;
+	cursor: pointer;
+	background: #F5F4FA;
+	border-radius: 4px;
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 26px;	
+	color:#212121;
+	border:none;
+	margin-right: 10px;
+}
+
+.porfolio-nav-btn:active{
+	color:#fff;
+	background: #2196F3;
+}
+
+.porfolio-nav-btn:hover{
+	color:#fff;
+	background: #2196F3;
+}
+
+.portfolio{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 94px;
+	
+}
+
+.portfolio-item{
+	background: #FFFFFF;
+	border: 1px solid #EEEEEE;
+
+	
+	margin-bottom: 30px;
+	margin-right: 18px;
+
+}
+
+.portfolio-info{
+	padding: 20px 24px;
+}
+
+.portfolio-project{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 36px;
+}
+
+.portflio-type{
+	font-size: 16px;
+	line-height: 30px;
+	color: #757575;
+}
