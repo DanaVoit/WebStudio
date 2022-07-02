@@ -1,7 +1,8 @@
 body { 
 	margin: 0;
 	color: var(--main-color);
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif; 
+	
 }
 
 :root{
@@ -52,6 +53,94 @@ ul{
 	list-style: none;
 }
 
+/*popup*/
+
+.popup{
+	position:fixed;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	width: 528px;
+	height: auto;
+	background-color: var(--white);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	display: none;
+	transition: opacity .2s ease-in-out;
+}
+
+
+.popup-area{
+	padding: 40px;
+	position: relative;
+}
+
+.popup-title{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	margin-bottom: 12px;
+}
+
+.popup-txt{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--grey-bckg);
+}
+
+.popup-txt--blue a{
+	color: var(--blue);
+}
+
+.popup-input{
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 10px;
+
+}
+
+.popup-check{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 20px 0 30px 0;
+}
+
+.popup-textarea{
+	height: 100px;
+	width: 100%;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+.popup-textarea::placeholder{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--grey-bckg);
+}
+
+.popup-close{
+	position: absolute;
+	right: 0;
+	top:0;
+	margin-top: 12px;
+	margin-right: 8px;
+	padding: 6px 9px;
+	
+	border-radius: 50%;
+	
+	align-items: center;
+	font-size: 14px;
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.popup-close:hover{
+	color:var(--blue);
+}
 
 
 /*header*/
@@ -101,6 +190,7 @@ ul{
 	color: var(--main-color);
 	margin-right: 50px;
 	position: relative;
+	transition: color 0.2s linear;
 }
 .header-links-current a{
 	color: var(--blue)
@@ -130,6 +220,7 @@ ul{
 	text-decoration: none;
 	color:var(--grey-bckg);
 	margin-right: 50px;
+	transition: color 0.2s linear;
 }
 
 .header-links-contacts a:hover{
@@ -182,6 +273,7 @@ ul{
 	height: 50px;
 	width: 200px;
 	border: none;
+	transition: color 0.2s linear;
 }
 .btn:focus{
 	border: 2px solid var(--white);
@@ -342,6 +434,7 @@ ul{
 
 	font-size: 22px;
 	color: var(--grey-border2);
+	transition: color 0.2s linear;
 	
 }
 .social-link:hover{
@@ -439,6 +532,7 @@ ul{
 	text-decoration: none;
 	font-style: normal;
 	margin-bottom: 9px;
+	transition: color 0.2s linear;
 }
 .footer-links:hover{
 	color: var(--blue);
@@ -493,6 +587,7 @@ ul{
 	color:var(--main-color);
 	border:none;
 	margin-right: 10px;
+	transition: color 0.2s linear;
 }
 
 .porfolio-nav-btn:active{
@@ -675,6 +770,10 @@ ul{
 	.porfolio-nav-btn{
 		margin-bottom: 20px;
 	}
+
+	.popup{
+		width: 400px ;
+	}
 }
 
 @media (max-width:550px){
@@ -698,96 +797,11 @@ ul{
 		margin-right: 0;
 	}
 
-}
-
-
-
-.popup{
-	position:fixed;
-	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-	width: 528px;
-	height: auto;
-	background-color: var(--white);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-	display: none;
-}
-.popup-active{
-	display: block;
-}
-
-.popup-area{
-	padding: 40px;
-	position: relative;
-}
-
-.popup-title{
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 23px;
-	margin-bottom: 12px;
-}
-
-.popup-txt{
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 14px;
-	color: var(--grey-bckg);
-}
-
-.popup-txt--blue a{
-	color: var(--blue);
-}
-
-.popup-input{
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
-	height: 40px;
-	width: 100%;
-	margin-bottom: 10px;
+	.popup{
+		width: 300pxss;
+	}
 
 }
 
-.popup-check{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin: 20px 0 30px 0;
-}
-
-.popup-textarea{
-	height: 100px;
-	width: 100%;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
-}
-.popup-textarea::placeholder{
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 14px;
-	color: var(--grey-bckg);
-}
-
-.popup-close{
-	position: absolute;
-	right: 0;
-	top:0;
-	margin-top: 12px;
-	margin-right: 8px;
-	padding: 6px 9px;
-	
-	border-radius: 50%;
-	
-	align-items: center;
-	font-size: 14px;
-	color: var(--main-color);
-	text-decoration: none;
-}
 
 
-
-.popup-close:hover{
-	color:var(--blue);
-}

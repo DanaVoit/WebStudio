@@ -12,7 +12,7 @@
     <link rel="stylesheet"  href="./css/style.css">
     <title>Web Studio</title>
 </head>
-<body>
+<body id="body">
 
     <!--header-->
     <header class="header container">
@@ -35,7 +35,7 @@
         <section class="home">
             <div class="home-inner">
                 <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="btn">Замовити послугу</button>
+                <button type="button" class="btn" id="popup_open">Замовити послугу</button>
             </div>
         </section>
 
@@ -266,9 +266,9 @@
         </section>
     </footer>
 
-        <div class="popup">
+        <div class="popup" id="popup">
             <div class="popup-area">
-                <a href="#" class="popup-close"><i class="fa-solid fa-xmark"></i></a>
+                <a href="#" class="popup-close" id="popup_close"><i class="fa-solid fa-xmark"></i></a>
                 <h3 class="popup-title">Залиште свої дані, ми перетелефонуємо</h3>
                 <form>
                    <p class="popup-txt">Iмя</p> <input class="popup-input" type="text" name="firstname" >
@@ -282,6 +282,6 @@
                 </form>
             </div>
         </div>
-  
+<script src="./js/popup.js"></script>
 </body>
 </html>
