@@ -136,6 +136,10 @@ ul{
 	color: var(--blue);
 }
 
+.header-links-contacts i{
+	margin-right: 10px;
+}
+
 
 
 /*home*/
@@ -143,6 +147,7 @@ ul{
 	background-color: var(--grey) ;
 	background: url(../images/home-bckg.jpg)center no-repeat;
 	background-size:cover;
+
 }
 
 .home-inner{
@@ -328,23 +333,33 @@ ul{
 	padding-bottom: 30px;
 }
 .social-link{
-	padding: 14px 12px 8px 12px;
-	width: 20px;
-	height: 20px;
+	padding: 10px 12px;
 	text-decoration: none;
 	margin-right: 10px;
 	cursor: pointer;
 	align-content: center;
-}
-.social-link--footer{
-	background-color: var(--grey-bckg);
-	border-radius: 50%;
+	vertical-align: middle;
+
+	font-size: 22px;
+	color: var(--grey-border2);
+	
 }
 .social-link:hover{
 	background-color:  var(--blue);
 	border-radius: 50%;
 	color: var(--white);
 }
+
+.social-link--footer{
+	background-color: var(--grey-bckg);
+	color:var(--white);
+	border-radius: 50%;
+}
+.social-link--footer:hover{
+	background-color: var(--blue);
+	border-radius: 50%;
+}
+
 
 
 /*clients*/
@@ -682,8 +697,97 @@ ul{
 		padding-bottom: 20px;
 		margin-right: 0;
 	}
-	
+
+}
 
 
+
+.popup{
+	position:fixed;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	width: 528px;
+	height: auto;
+	background-color: var(--white);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	display: none;
+}
+.popup-active{
+	display: block;
+}
+
+.popup-area{
+	padding: 40px;
+	position: relative;
+}
+
+.popup-title{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	margin-bottom: 12px;
+}
+
+.popup-txt{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--grey-bckg);
+}
+
+.popup-txt--blue a{
+	color: var(--blue);
+}
+
+.popup-input{
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 10px;
+
+}
+
+.popup-check{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 20px 0 30px 0;
+}
+
+.popup-textarea{
+	height: 100px;
+	width: 100%;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+.popup-textarea::placeholder{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--grey-bckg);
+}
+
+.popup-close{
+	position: absolute;
+	right: 0;
+	top:0;
+	margin-top: 12px;
+	margin-right: 8px;
+	padding: 6px 9px;
 	
+	border-radius: 50%;
+	
+	align-items: center;
+	font-size: 14px;
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+
+
+.popup-close:hover{
+	color:var(--blue);
 }
