@@ -34,6 +34,9 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+a{
+	text-decoration: none;
+}
 
 
 .container {
@@ -129,8 +132,7 @@ ul{
 	margin-top: 12px;
 	margin-right: 8px;
 	padding: 6px 9px;
-	
-	border-radius: 50%;
+
 	
 	align-items: center;
 	font-size: 14px;
@@ -141,6 +143,86 @@ ul{
 .popup-close:hover{
 	color:var(--blue);
 }
+
+
+.mobile-menu{
+	position:fixed;
+	top:0;
+	right: 0;
+	margin-top: 20px;
+	width: 100%;
+	height: auto;
+	height: auto;
+	background-color: var(--white);
+	padding: 48px 40px;
+}
+.mobile-menu-close{
+	
+	position: absolute;
+	right: 0;
+	top:0;
+	margin-top: 12px;
+	margin-right: 15px;
+	padding: 6px 9px;
+	align-items: center;
+	font-size: 28px;
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.mobile-menu-links a{
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 47px;
+	color: var(--main-color);
+}
+.mobile-menu-links li{
+	margin-bottom: 32px;
+}
+.mobile-menu-links li:last-child{
+	margin-bottom: 0;
+}
+
+.mobile-menu-links{
+	margin-bottom: 250px;
+}
+.mobile-menu-links-contacts{
+	margin-bottom: 64px;
+}
+
+.mobile-menu-phone a{
+	font-weight: 500;
+	font-size: 34px;
+	line-height: 40px;
+	color: var(--blue);
+	text-decoration: none;
+}
+.mobile-menu-phone{
+	margin-bottom: 32px;
+}
+.mobile-menu-email a{
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: var(--grey-bckg);
+}
+.mobile-menu-social{
+	display: flex;
+	flex-direction: row;
+}
+.mobile-menu-social-item a{
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	color: var(--blue)
+}
+.mobile-menu-social-item{
+	margin-right: 20px;
+}
+.mobile-menu-social-item:last-child{
+	margin-right: 0;
+}
+
 
 
 /*header*/
@@ -231,8 +313,14 @@ ul{
 	margin-right: 10px;
 }
 
+.mobile-menu-btn{
+	display: none;
+}
 .mobile-menu{
 	display: none;
+}
+.mobile-menu-active{
+	display: block;
 }
 
 /*home*/
@@ -764,7 +852,7 @@ ul{
 		display: none;
 	}
 
-	.mobile-menu{
+	.mobile-menu-btn{
 		display: block;
 		right:0;
 		position: absolute;
@@ -775,7 +863,7 @@ ul{
 		cursor: pointer;
 	}
 
-	.mobile-menu:hover{
+	.mobile-menu-btn:hover{
 		color:var(--blue);
 	}
 
@@ -799,11 +887,21 @@ ul{
 	.popup-area{
 		padding: 30px;
 	}
+
+
 }
 
 @media (max-width:550px){
 	.header-links, .header-links-contacts{
 		display: none;
+	}
+	.header{
+		position: fixed;
+		background-color: var(--white);
+	}
+	.header-nav{
+		padding: 20px 0 20px 0;
+	
 	}
 	.dsrcpt-item-title{
 		text-align: center;
